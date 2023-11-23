@@ -1,0 +1,9 @@
+Package: hotpot6
+Version: 6.0.6.14-p-noreg-64combo
+Architecture: amd64
+Maintainer: hotpot6 <hotpot@iscas.ac.cn>
+Depends: hotpot-font(>=1.0), hotpot-mono-5.1.1(>=1.0), hotpot-gecko-2.47.2(>=1.0), winedep(>=1.0-1)
+Section: otherosfs
+Priority: optional
+Homepage: <insert the upstream URL, if relevant>
+Description: hotpot6

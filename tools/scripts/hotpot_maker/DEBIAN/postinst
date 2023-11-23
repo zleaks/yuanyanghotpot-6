@@ -1,0 +1,53 @@
+#!/bin/bash
+
+gtk-update-icon-cache -f /usr/share/icons/hicolor
+
+#for wineboot
+if [ "$USER" != "" ] && [ "$USER" != "root" ]; then 
+  user=$USER
+elif [ "$SUDO_USER" ]; then
+  user=$SUDO_USER
+else
+  user=`id -n -u 1000`
+fi
+
+if [ "$user" ]; then
+  home="/home/$user";
+  if [ ! -x $home/.cache/wine ]; then
+        if [ -x /opt/winux/res/deploy/packages/addons ]; then
+            ln -s /opt/winux/res/deploy/packages/addons $home/.cache/wine
+        fi
+  fi
+
+  # update 50iscas
+  sed -i "s/@iscas@/$user/g" /etc/udev/rules.d/50-iscas.rules
+
+  #dev
+  sudo udevadm control --reload
+
+  # pipelight for ukey
+  #sudo pipelight-plugin --unlock nphdzb
+  #sudo pipelight-plugin --enable nphdzb
+  #sudo pipelight-plugin --unlock npccbnetsign
+  #sudo pipelight-plugin --enable npccbnetsign
+  #sudo pipelight-plugin --unlock npactivex
+  #sudo pipelight-plugin --enable npactivex
+
+  #pipconflist=`find /usr/share/pipelight/configs/ -type f -name "pipelight-*"`;
+
+  #for conf in $pipconflist;
+  #do
+    #echo $conf;
+    #sed -i -E 's/\$share\/wine(64){0,1}/$HOME\/APPS\/ccb/g' $conf;
+    #sed -i -E 's/\$HOME\/\.wine(-pipelight){0,1}(64){0,1}/$HOME\/APPS\/ccb/g' $conf;
+  #done;
+ 
+  #for wineboot
+  #home="/home/$user";
+  #if [ ! -x $home/.wine ]; then
+  #    sudo -u $user -H bash -c '/usr/local/bin/wine wineboot'
+  #fi;
+ 
+fi
+
+exit 0

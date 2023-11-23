@@ -1,0 +1,9 @@
+MODULE    = WinmageScanImage.dll
+IMPORTS   = comdlg32 shell32 shlwapi user32 gdi32 advapi32
+EXTRALIBS = -L${srcdir} -ldl
+#EXTRADLLFLAGS = -Wb,--external-symbols, -mwindows -mno-cygwin
+
+C_SRCS = \
+    adapter.c
+
+RC_SRCS = version.rc

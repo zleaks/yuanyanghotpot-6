@@ -1,0 +1,16 @@
+MODULE    = founder_adv.ds
+IMPORTS   = comctl32 user32 gdi32
+EXTRAINCL = $(SANE_CFLAGS) -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 -DMAGICKCORE_HDRI_ENABLE=1 -DMAGICKCORE_QUANTUM_DEPTH=16 -I/usr/local/include/ImageMagick-7
+EXTRALIBS = -L/usr/local/lib -lMagickWand-7.Q16HDRI -lMagickCore-7.Q16HDRI
+#CFLAGS += `pkg-config --cflags MagickWand`
+#LDFLAGS += `pkg-config --libs MagickWand`
+
+C_SRCS = \
+	capability.c \
+	ds_ctrl.c \
+	ds_image.c \
+	options.c \
+	sane_main.c \
+	ui.c
+
+RC_SRCS = sane.rc

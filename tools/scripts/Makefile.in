@@ -1,0 +1,3 @@
+SCRIPTS = reg_yuanyanghotpot.py collector.py wineprc
+
+INSTALL_DEV = $(SCRIPTS)

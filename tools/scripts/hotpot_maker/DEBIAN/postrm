@@ -1,0 +1,34 @@
+#!/bin/bash
+# postrm script for winuxgear
+#
+# see: dh_installdeb(1)
+
+
+# rm -rf /home/*/.wine;
+# rm -rf /home/*/.cache/wine;
+
+# list=( winebrowser notepad hh A-Wine-application winhlp32 rundll32 Wine-Internet-Explorer hhhh Wine-Installer )
+# for i in "${list[@]}"
+# do
+#     rm -f /home/*/.local/share/applications/$i.desktop
+# done
+
+#rm -f /home/*/.local/share/mime/packages/x-wine*
+#rm -f /home/*/.local/share/applications/wine-extension*
+#rm -f /home/*/.local/share/icons/hicolor/*/*/application-x-wine-extension*
+#rm -f /home/*/.local/share/mime/application/x-wine-extension*
+
+#clean Windows menu
+sed -i -z 's/\
+    <!-- Windows -->\
+    <Menu>\
+      <Name>Windows<\/Name>\
+      <Directory>wine-wine.directory<\/Directory>\
+      <Include>\
+        <And>\
+          <Category>Windows<\/Category>\
+        <\/And>\
+      <\/Include>\
+    <\/Menu> <!-- End Windows -->\n//g' /etc/xdg/menus/cdos-applications.menu || true
+
+exit 0

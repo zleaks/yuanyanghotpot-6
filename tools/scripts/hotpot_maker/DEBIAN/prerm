@@ -1,0 +1,14 @@
+#!/bin/bash
+# postrm script for winuxgear
+#
+# see: dh_installdeb(1)
+
+# wineserver -k || true;
+# kill -9 $(ps aux | grep '[w]ineserver' | awk '{print $2}') >/dev/null 2>&1 || true;
+# kill -9 $(ps aux | grep '[w]ine' | awk '{print $2}') >/dev/null 2>&1 || true;
+# echo -e "\033[31m注意：接下来将强制关闭所有Windows应用程序，请确定您打开的应用已经做好了保存工作！\033[0m"
+# echo -e "\033[31m您是否为打开的Windows应用做好了保存工作？［yes］- 继续安装；［no］- 终止安装。\033[0m"
+
+wineprc -kk all &> /dev/null
+
+exit 0

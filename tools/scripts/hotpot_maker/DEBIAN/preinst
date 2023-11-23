@@ -1,0 +1,28 @@
+#!/bin/bash
+
+find /usr/share/icons/ -name "wine*.*" -exec rm {} \;
+rm -f /home/*/.local/share/desktop-directories/wine-wine.directory
+
+#add hotpotmenu
+# menu
+if [ -f "/etc/xdg/menus/cdos-applications.menu" ]
+then
+if ! grep -q "Windows" /etc/xdg/menus/cdos-applications.menu
+then
+sed -i '/<!-- End Internet -->/a \
+\
+  <!-- Windows -->\
+  <Menu>\
+    <Name>Windows</Name>\
+    <Directory>wine-wine.directory</Directory>\
+    <Include>\
+      <And>\
+        <Category>Windows</Category>\
+      </And>\
+    </Include>\
+  </Menu> <!-- End Windows -->' /etc/xdg/menus/cdos-applications.menu
+
+fi
+fi
+
+exit 0

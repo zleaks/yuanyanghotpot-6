@@ -1,0 +1,39 @@
+diff --git a/dlls/comctl32/comctl32.h b/dlls/comctl32/comctl32.h
+index 66b341ae5ad..1af9baea7ee 100644
+--- a/dlls/comctl32/comctl32.h
++++ b/dlls/comctl32/comctl32.h
+@@ -193,7 +193,7 @@ BOOL Str_SetPtrAtoW (LPWSTR *lppDest, LPCSTR lpSrc) DECLSPEC_HIDDEN;
+ BOOL Str_SetPtrWtoA (LPSTR *lppDest, LPCWSTR lpSrc) DECLSPEC_HIDDEN;
+ BOOL imagelist_has_alpha(HIMAGELIST, UINT) DECLSPEC_HIDDEN;
+ 
+-#define COMCTL32_VERSION_MINOR 81
++#define COMCTL32_VERSION_MINOR 0
+ 
+ /* Our internal stack structure of the window procedures to subclass */
+ typedef struct _SUBCLASSPROCS {
+diff --git a/dlls/comctl32/comctl32.rc b/dlls/comctl32/comctl32.rc
+index c9aa1ba6253..be6e2425193 100644
+--- a/dlls/comctl32/comctl32.rc
++++ b/dlls/comctl32/comctl32.rc
+@@ -114,7 +114,7 @@ LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+ #define WINE_FILEDESCRIPTION_STR "Wine Common Controls"
+ #define WINE_FILENAME_STR "comctl32.dll"
+ #define WINE_FILEVERSION COMCTL32_VERSION, COMCTL32_VERSION_MINOR, 4704, 1100
+-#define WINE_FILEVERSION_STR "5.81"
++#define WINE_FILEVERSION_STR "6.00.4704.1100"
+ #define WINE_PRODUCTVERSION WINE_FILEVERSION
+ #define WINE_PRODUCTVERSION_STR WINE_FILEVERSION_STR
+ 
+diff --git a/include/commctrl.h b/include/commctrl.h
+index dfd2f4a37d2..0784478ce14 100644
+--- a/include/commctrl.h
++++ b/include/commctrl.h
+@@ -51,7 +51,7 @@ enum _LI_METRIC
+ HRESULT WINAPI LoadIconWithScaleDown(HINSTANCE, const WCHAR *, int, int, HICON *);
+ HRESULT WINAPI LoadIconMetric(HINSTANCE, const WCHAR *, int, HICON *);
+ 
+-#define COMCTL32_VERSION                5  /* dll version */
++#define COMCTL32_VERSION                6  /* dll version */
+ 
+ #define ICC_LISTVIEW_CLASSES   0x00000001  /* listview, header */
+ #define ICC_TREEVIEW_CLASSES   0x00000002  /* treeview, tooltips */

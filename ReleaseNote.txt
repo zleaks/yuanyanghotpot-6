@@ -1,0 +1,487 @@
+
+安装火锅6.0需要的依赖包
+winedep_1.0-1_amd64.deb
+
+
+
+20210527 普通版，修改点：总体部的修改 + 注册功能 + 微信修改 + 云视讯修改 + 数码大方修改
+输出版本：yuanyanghotpot_6.0.5.3-u_amd64.deb
+
+
+20210527 高级版，修改点：总体部的修改 + 注册功能 + 微信修改 + 云视讯修改 + 数码大方修改
+输出版本：yuanyanghotpot_6.0.5.3-p_amd64.deb
+
+
+20210601 去掉注册功能，新拉分支出版本
+输出版本：yuanyanghotpot_6.0.5.4-p-noreg_amd64.deb
+
+20210604 修复腾讯视频工具栏不能点击的bug
+输出版本：yuanyanghotpot_6.0.5.6-p-noreg_amd64.deb
+
+
+20210610 修复西安银行项目excel插件问题
+输出版本：yuanyanghotpot-amd64-6.0.5.8-p-noreg.deb
+
+
+20210621 默认应用关联; 数码大方工艺新建不能打开工程; 数码大方在专用机上不能启动；acdsee菜单置灰；acdsee文件创建时间；catia黑白屏，界面无响应；creo3.0软件启动时无法最大化以及没有taskbar
+输出版本：yuanyanghotpot-amd64-6.0.5.10-p-noreg.deb
+
+
+20210702 修改点：
+修改了打包工具会替换wine.inf为4.0的问题。
+5a6c47ddb1bd5901d4c70e630ea7508a38cbf4e3 解决腾讯视频会议异常窗口问题
+以下7项解决腾讯会议-打开会议-工具栏长时间无效的问题
+4f678cf102d0f283d1ee74690fb8f8835eda4ba1 ntdll: Implement IOCTL_AFD_RECV.
+add0a90ac95f460a7a244b4ac0cdeb94a7e46aac ntdll: Move struct async_fileio to unix_private.h.
+bedea8415c893cb519786edcc7021815a52055a6 server: Implement IOCTL_AFD_LISTEN.
+008003fe82f8f0392dd78bb8f1a9f897d570ab7b server: Rename "hmask" to "reported_events".
+06f787aa0d722ef89147351e85ef750d59582caf server: Rename "pmask" to "pending_events".
+38b9e01ae3913ec3c198c8f52fafac919e3019fc server: Add a helper to post socket events.
+c00b280e811a6275a29c1c81790cc03638603218 server: Avoid calling get_unix_fd() in IOCTL_AFD_CREATE.
+1abf4518df093cc2ec6ee750365c256cd0af86a8 修改数码大方工艺软件执行的判断
+300e91ccfe2495f101dda23ec773eb493790409c 增加数码大方工艺软件执行判断
+e75aa2aafc70a76c9751d2ed4ac49c9a73b1d6b7 性能优化专项：应用启动性能优化
+输出版本：yuanyanghotpot_6.0.5.11-p-noreg_amd64.deb
+
+临时代码关闭3D：
+stash@{0}: On hotpot_6.0_professional_no_reg: no3d
+输出版本：yuanyanghotpot_6.0.5.11-p-noreg-no3d_amd64.deb
+
+
+20210707 修改点：
+集成了mono5.1.1 和gecko2.4.7.2
+5cae22d4f0ca10ab2482cda24baa62e8c4c7e819 修正因关闭腾讯会议子窗口强制关闭而导致的共享桌面无法打开的问题，改为腾讯会议子窗口不受wine管理状态。
+4baf87e0f7ebe3bcba90ddbe87b7c920b9ef04a1 修复word_2010字体显示乱码
+82baf651c1d29cc7ba290f690b79c4aa083f1dac photoshop7 window frozen
+70e9a99363ae80750b974de0f4d03c7026632725
+    various hotpot distributions
+    ./configure --enable-professional
+    __HOTPOT_PROFESSIONAL__        --------  professional version
+    
+    ./configure --disable-register
+    __HOTPOT_DISABLE_REGISTER__    --------  no register version for development
+    
+    ./configure --disable-3drender
+    __WINED3D_DEFAULT_RENDERER_NO3D__  ----  used no3d render for zhaoxin gpu
+    
+    ./configure --enable-professional --disable-register --disable-3drender
+    can be used together
+输出版本：yuanyanghotpot_6.0.5.13-p-noreg_amd64.deb
+
+
+20210710 修改点：
+fd6a68d3249a7a5556a7f571eb5f7280389ef113 Zoom sdk(Vilin etc.) freeze when exit meeting
+d897f6f4140ba8976b0ce660c60772a9ad84bcd0 yunshixun no video offical commit a216c0a28b7ded2d35d6692767468510f2a2e468
+5a0265b4ce27c4c38f8fc383cc14e3a96e3d20fb zoomSDK(vilin etc.) can not share desktop
+21534347a1108499d4db56a11f48d35ffc73097d Merge branch 'project2007_no_reg' into 'hotpot_6.0_professional_no_reg'
+8573c7b9ad474521c32691a378dcb8aac85b2d7f register different by  __HOTPOT_PROFESSIONAL__
+a05c3632ce66cf769fbfa03985f773e40a4336aa Merge branch 'project2007_no_reg' into 'hotpot_6.0_professional_no_reg'
+5034dcca2bbffbcba8e34432f62be5e67ab8c9bf [bug#0360779]project2007-三元用户和普通用户下都无法正常启动软件(解决关闭creo后再运行project2007,project概率无法启动的问题)
+3c15e867bedc59c4f8496332ec475101665efbc5 [bug#0360779]project2007-三元用户和普通用户下都无法正常启动软件
+输出版本：yuanyanghotpot_6.0.5.14-p-noreg_amd64.deb
+
+
+20210713 修改点：
+32位和64位兼容编译版本
+b4da9b068faa1a79600d8bf39061047a8f734a5a apai reader open menu slow
+1d6a7fb226fb2da748625bd19b97edb20e1bd300 modify permission of created dir for ZY
+42f3c59014c6c885ea811515848f5c1e2656bd93 change mapping NOEXEC for ZY
+bc52c65cdc844f0116e3da33d735bc13ba7ccfd8 remove user restrictions for ZY
+输出版本：
+yuanyanghotpot_6.0.5.15-p-noreg-64combo_amd64.deb
+
+
+20210719 修改点：
+修改了集成mono和gecko的方式，解决专用机上第一次运行应用有mono和gecko弹框的问题。
+4cbdde91e0e0eee6ef8a1c31cdb34bbe9a73bdb5 Add judgment on the existence of undate_dir
+b4a106722872416c11c8282c81664c7b9d848fb6 foxmail鼠标左键打开用户信息窗口闪退
+输出版本：yuanyanghotpot_6.0.5.16-p-noreg-64combo_amd64.deb
+
+
+20210723 修改点：
+cec1ce879b9b4e3c31eee30e01408a36ca6265b7 解决foxmail因为拖拽而导致的死锁问题，解决方案禁止拖拽
+6cde0f74d44dd0e485d6ba501d4eec676394f8f8 修正Source Insight 3菜单按钮失灵问题
+ae840f4aed1fc06c4cbae6ee297520c69721bd57 云视讯远程控制窗口不正常显示
+c08de55d492a16ae896b3734f00caaea7f0b810e catia修改重写，将添加的代码移出临界区
+d88005ec2b0c8813ed8a0c092a005cf8d18442e4 Merge branch 'bug_0361487' into 'hotpot_6.0_professional_no_reg'
+1f520f25f9059545ea4a223fc781c7ffe02655f9 Merge branch 'fix_autocad_datetime' into 'hotpot_6.0_professional_no_reg'
+e580a27b659bd89957d4dce2e46e9dccc52dfce3 [bug#0361487]: Project TY/ZY- 软件功能菜单栏-插入菜单-项目，点击插入项目并选择项目，软件出现无响应提示（100%概率）
+输出版本：yuanyanghotpot_6.0.5.17-p-noreg-64combo_amd64.deb
+
+
+20210728 修改点：
+e976bb3b4493c987c2f0307f87611ea9635ed5b8 解决爱剪辑无法正常打开的问题
+9e5b0a6abbcd2942f286f75e4efdc4f5fbe4e05c catia project窗口频繁出现黑屏/白屏现象
+输出版本：yuanyanghotpot_6.0.5.18-p-noreg-64combo_amd64.deb
+
+
+20210730 修改点：
+添加了编译依赖libvulkan等。
+484b8f48122fd779067ab9a7e4254fe1ad7c1461 revert ef172b21d3582e9c4c01082536b5483d8f5a75f6 for can't print bug
+输出版本：yuanyanghotpot_6.0.5.19-p-noreg-64combo_amd64.deb
+输出版本：yuanyanghotpot_6.0.5.19-p-64combo_amd64.deb
+
+
+20210809 修改点：
+b81def24e17f2dc155b511f5cd3e8df6192f90a3 解决微信3.3.0小程序无法打开和微信企业版部分功能异常的问题，字体连接引起的，沿用线上旧版本的字体修正方案
+cbf43da58bbaf7b17f731f74004a4b41c5c39e20 从线上拉取的代码，能够解决微信3.3.0看一看功能无法打开的问题。
+1ca2ab977b4f9f17b02a78ae5f076835975e85ee 修正source insight对数据的获取，加上进程特征值判断。
+输出版本：yuanyanghotpot_6.0.5.20-p-noreg-64combo_amd64.deb
+
+
+20210817 修改点：
+d99c8a91e015cb454959bb358f3cf7bc76048fe3 revert wlz's commit for wechat
+c72f1932dac5b8a05f306d3d09c494365b0e7d82 catia 工作窗白屏、花屏问题的修复 - 2
+7376288225c331320eb70828be3596aad3f45cb7 catia 工作窗白屏、花屏问题的修复
+c6133af2ca469b8c091f9c69707901dcfdf38360 解决微信3.3.0小程序无法打开和微信企业版部分功能异常的问题，字体连接引起的，沿用线上旧版本的字体修正方案 - 2
+输出版本：yuanyanghotpot_6.0.5.21-p-noreg-64combo_amd64.deb
+
+
+20210819 修改点：
+4f926df1461b566c5a77fed72288a294e5e57225 merge c19fc01d363e06fa9a3a19d6f5f8cbd2d6057f9e for wemeet share desktop bug
+输出版本：yuanyanghotpot_6.0.5.22-p-noreg-64combo_amd64.deb
+
+
+20210915 修改点：
+586b958281f46ea48cbeefe493330aedc505e28e bug0361271: autocad2008:ZY/TY-安装后，运行约1小时出现许可证报错，“错误中断”、“本产品未在本系统上未正确激活”确定后出现“致命错误”提示
+输出版本：yuanyanghotpot_6.0.5.23-p-noreg-64combo_amd64.deb
+
+
+20210901 修改点:
+c4ceaff150538d5c973179ffa6d3f5c84631bced 编译宏里加入wemeet
+6187ebbdb227631177b5472169f69e11c3501fd7  wecom 学习园地无法退出,右上角缺少关闭、最小化等按钮
+40041d383f4c1c057eacfe12ab321f473a052e2f 修改微信截图发白的问题
+7137785590339c310a5d57521793533daaad47ed 腾讯会议共享屏幕时，阻止工具栏收起
+5f61d93d5338711dff1dd740346b5cec434cae3a ”文件关联：修复增加关联不生效的bug，以及删除关联时需要删除两遍的bug“
+87059435d72782be33ec68f0fe5acecaa74329f0 修改编译脚本，catia wechat qq 应用此方案
+5bb8f992c2bef11ce924e3396dd261ffd2e6422c qq群公告字体乱码修复
+050ff9798f0b9da866e537c78de82371c6d352bc 修正微信3.3.0小程序乱码问题，在容器中提供自定义字体，禁止微信3.3.0容器启用wine自带明僚体。
+f1a7da9d050affb75b823edc10479a1bdd0269ec 用宏来控制不同应用的代码；自动化编译脚本, 详情： ./hotpot.sh --help；扩展wine-appmanager；引入wineprc
+输出版本：yuanyanghotpot_6.0.6.1-p-noreg-64combo_amd64.deb
+
+
+20210903 修改点：
+01921fbf0318a7efa18e6d9d19dbe17ef0e19eed 修改脚本，解决专用机无法安装应用的问题，增加print参数，可以打印出启动命令
+ebba62e6e21260f98c911a20f02e82f6517b95d5 屏蔽腾讯会议自动升级的功能
+a2998be976e4429da5685b9371615dba0f89b63b 腾讯会议打开设置慢的问题
+5a6e8149720b8a45a4d0c03560d130f3a390604a 修改编译脚本，增加应用安装时修改注册表的流程，统一将宏改为 __HOTPOT_APPNAME__
+eb274cbf22a4411a3c7ddbd8593846f742fe088b 修改编译脚本中的 remake 和appmanager
+输出版本：yuanyanghotpot_6.0.6.2-p-noreg-64combo_amd64.deb
+
+
+20210907 修改点：
+50f16c56a5a18679d5fb2f6bba17185210dc4b35 user32和gdi32模块去GetModule流程 -- 一处逻辑修改错误
+bfa8ec433855b005b4316ee193856a35677e4765 user32和gdi32模块去GetModule流程（将云视讯，企业微信，creo3,sourceinsight的修改用宏管理）
+0e9f7b8ff7cd000c57a21dc4a72a2acfe56d75b2 通过WINEPREFIX获取share dll path，弃用APP_SPEC_WINEDLLPATH
+70fb36c1404c9be67a4471d73d8a4c5255d42a17 修改微信：     1、修改了点击朋友圈左上角提示图标，内容显示不出来的问题；     2、解决了小程序显示空白的问题（优化方案）     3、解决了推送小程序会卡死的问题     4、解决了小程序长时间不动会卡死的问题
+ecbcdf71b056cf9a5744e77977b8bb26c788faf0 Merge branch 'bug_0361315_acad' into 'hotpot_6.0_professional_no_reg'
+f0609aac5c848ba43bdcd813813b2a8a2b537b88 Merge branch 'bug_0361603' into 'hotpot_6.0_professional_no_reg'
+输出版本：yuanyanghotpot_6.0.6.3-p-noreg-64combo_amd64.deb
+
+
+20210913 修改点：
+8c076022c902014d6758dad2bd9e158501b500e2 QQ双击联系人不能弹出聊天窗口；QQ主界面第二次点击...菜单无法显示的问题
+123da9eb0a65dd0cf67c19b7034e871e30af86b1 企业微信编译添加gdi32，修复不能打开微盘的问题
+输出版本：yuanyanghotpot_6.0.6.4-p-noreg-64combo_amd64.deb
+
+
+20210917 修改点：
+eb26ae62ff0b5058bea0619875a93402d9db22db 修改企业微信打开语音会议高概率卡死的问题
+d9c8a0265b19c7242191f37742a0b540442a6414 修复photoshop窗口最大化后，关闭窗口，背景显示异常的问题
+99566c6c7840f3c09a303991ff374e65c54326e0 bug0361453: Project2007 TY/ZY点击项目管理，新建项目成功后，点击时间选择器进行设置时间会出现错误提示（概率：100%） 补充
+a68db731348ceacf61ba3a5d59a5765e3dbc2c2a Merge branch 'fix_cad_dlg' into 'hotpot_6.0_professional_no_reg'
+f05b1c17f57a59ae6f55b68d4bdec4afaff73dfa 修正AutoCAD工具栏显示不全，使用洪刚的patch，删除了之前的临时方案。
+2a2e2dfea680d3d3c0feb9d9f6c2c557439b2c43 bug0361271: autocad2008:ZY/TY-安装后，运行约1小时出现许可证报错，“错误中断”、“本产品未在本系统上未正确激活”确定后出现“致命错误”提示
+输出版本：yuanyanghotpot_6.0.6.5-p-noreg-64combo_amd64.deb
+
+
+20210924 修改点：
+11659be47b485e8950ecbd0c1e2207f156faef51 去掉企业微信的阴影窗口
+f509530928924e70e95b2ebebec2094d4de8e2cb bug0361603: Project 2007-ZY/TY：点击文件新建空白项目-新建项目展示不全，只展示最小化最大化和关闭按钮，点击最大化页面卡死（100%）(改用宏控制)
+2054a0517bfe68c3793ea978aa302d59aee68e3a 修改企业微信打开语音会议高概率卡死的问题 - 2
+2cf3ba5572f71ffc8769e9599ba87c94e318640 0361375 fix autocad2008-ZY/TY：选择参照文件对话框中，选择删除（或者新建文件夹），无法删除文件(或者新建文件夹)。
+输出版本：yuanyanghotpot_6.0.6.6-p-noreg-64combo_amd64.deb
+
+
+20210929 修改点：
+d6b7ac5a1fa30556eba2e95d68df5cd079b0ab18 adobe reader10 首选项窗口里点击3D和多媒体崩溃；菜单点击追踪器、帮助、朗读等崩溃
+48430b6675900213372a3e103846859c128f3dfd 解决winedbg不能调试的问题
+669005cef7898d0d0c25de2e01aa710c94c1d04a 微信截屏，不能最小化窗口
+e3ac5a4c1b18a25a69eee0e51fc22cdc8d2243f9 解决office2007多开文件时，任务栏切换导致的死循环，解决方法禁用任务栏切换
+1a68a4da45745b91255e5024bfd7caab2abc488c 企业微信，收到微信小程序，打开的时候报错
+f3f9dc3087d62b365a1265db70b695c373741744 Merge branch 'bug0361417' into 'hotpot_6.0_professional_no_reg'
+544ff499a4002d3db7d8c87f39e0cefe3608b8d0 Merge branch 'bug_0361321' into 'hotpot_6.0_professional_no_reg'
+b8a40ac2a7cfdb6ed4bd50c29ab2527790fde1e8 bug0361417:autocad2008-ZY/TY: 选择图形，点击插入-超链接，链接成功后，点击图形不能查看链接内容(100%) and bug0361377: autocad2008-ZY/TY：[性能] 点击搜索web，需要大约71s才弹出'浏览web-打开' 对话框。dns问题通过配置RES_OPTIONS来解决
+b12c713d2865be58e03b0e4168fcdd5eaddef896 bug_0361321: autocad2008:ZY/TY-视图-渲染-材质，工具-选项板-材质，命令materials，三种打开材质方式，每个方式也不能打开两次，两两不能先后打开，直接退出软件
+输出版本：yuanyanghotpot_6.0.6.7-p-noreg-64combo_amd64.deb
+
+
+20211011 修改点：
+a22aa981cc0b778339835f0373b65256332e22c 解决e3使用oleaut32时无法打开office_excel的问题
+eced620716d407e2da2f56652e99215e05a54c63 解决企业微信微文档无法转发问题
+700e9ee5a53172fb19bed19b03bb8ea8221f960e 关于wxwork的历史修改导致打开网页失败（爱剪辑打开共享相册）
+f1b172ba06862e86399996f76db6e1091dcf362e 修改企业微信右下角系统图标消失问题引起了小程序崩溃
+输出版本：yuanyanghotpot_6.0.6.8-p-noreg-64combo_amd64.deb
+
+
+20211019 修改点：
+ba3a84fd4c7d935a963bd6d990a3c4a1d9f5602d wine-appmanager启动脚本增加参数，vms增加环境变量
+c812efd151ac8009d833a5887ab817d26e6eca7b pdh: Add PdhGetFormattedCounterArrayA stub (for vms3)
+41dc786910fe7332b750e6381ffcc810a8a628c6 修改应用关联时，updatetime文件不存在的错误
+41758b1fc601058dc275ff9b6358110642db5bbc Merge branch 'bug_0361585' into 'hotpot_6.0_professional_no_reg'
+b77b8c15ab4cba368b76a57ea0b26eca2be31796 Merge branch 'bug_363333' into 'hotpot_6.0_professional_no_reg'
+3970592724222679f8952eac4d0251935c2ec4f2 0363333: ［数码大方线切割］TY：（严重）插入-图库，点击插入，在插入图幅中点击名称中图形后关闭弹窗，应用崩溃wine报错
+ce2acfff7298d3b0b9c0deebda397c915d5e8afe bug_0361585: WinRAR（评估版本）TY/ZY文件-反选按钮，点击后未选中除当前选中内容的其他全部内容（100%）
+50441d713970760b03e7f89372fcfb8932abc2f6 Merge branch 'bug_0361397' into 'hotpot_6.0_professional_no_reg'
+1b4214615b5835b3e702ad7f2fd481e663e8fcd0 bug_0361397: autocad2008:ZY/TY-（主体）在活动窗口画一直线，鼠标右击，选择特性，弹出窗口没有加载具体特性内容 （100%）
+28ea0f0e4115089e3bc3d32916d42df022ffb159 bug_0363575:wine-appmanager启动exe支持追加命令行参数
+098e8e823191cd9dd01d32c809011b7cef929d42 Merge branch 'bug_0361355' into 'hotpot_6.0_professional_no_reg'
+50e67d81bf4c035c2be69a8ec92895ddd28b4de5 bug_0361355: autocad2008:ZY/TY- (主体)视图-渲染-光源-材质，点击“从图中删除”，自动退出软件(补充其他软件的uNewState赋值)
+0522730ec2ca3693448a518b96f6e58b13967172 Merge branch 'bug_0361401' into 'hotpot_6.0_professional_no_reg'
+ea9ebf84de35b2620addc90a311bb0254b8f9fd4 Merge branch 'bug_0363327' into 'hotpot_6.0_professional_no_reg'
+9463f0370a76586795e6c6fb24551acbadf4203e Merge branch 'bug_0361355' into 'hotpot_6.0_professional_no_reg'
+c363137cb7da4a0850e81ed72a3e7b47dfdc28e7 Merge branch 'bug_0361335' into 'hotpot_6.0_professional_no_reg'
+302b78f6316f5bcb50f1d1f2be36f5f6f352abdd 0361335: autocad2008:ZY/TY-（主体）选择性粘贴为位图/，弹出报错提示'acapp.arx ARX命令中发生异常'，点击关闭模型窗口，AutoCAD 应用自动退出。
+e5f53ca17aa8c560bfbce14753afecaa24a9bb7a Merge branch 'bug_0361393' into 'hotpot_6.0_professional_no_reg'
+77760af305682125d0ea1605e00ea9f0f00792f3 bug_0361401: autocad2008-ZY/TY: （主体）点击插入-字段-字段类别选择“日期和时间”，软件闪退（100%
+49aa10086df9eda7e4816831f25a5ebcf53cc356 bug_0363327: 第二次打开“视图”，崩溃
+e0499d68e5b092575588b5a0185e122d10aa33d3 bug_0361355: autocad2008:ZY/TY- (主体)视图-渲染-光源-材质，点击“从图中删除”，自动退出软件
+5e7573fc10f36b2d75eace370beb66ade530b295  0361393: autocad2008-ZY/TY: （主体）拖拽图片到图纸，无法操作autocad应用中的菜单，等待一会儿，弹出强制关闭cad窗口.[100%] 拖拽屏蔽处理
+b739623def226a0309fc9c91c54c0d2c62df3fa7 Merge branch 'bug_363289' into 'hotpot_6.0_professional_no_reg'
+输出版本：yuanyanghotpot_6.0.6.9-p_amd64.deb
+输出版本：yuanyanghotpot_6.0.6.9-p-noreg-64combo_amd64.deb
+
+
+20211027 修改点：
+6a81f852580e465bae91d5061e3f4a05dd7c071e hide shadow window of Dingtalk
+6da402a35defc2e0383210ad74ba2613bd2612ad office2019登录界面无法显示
+3993724a66ef5c387b29dd4ad453f50d66b8f4a5 解决保存桌面后文件不存在的问题
+4e53ea9ea53f417e0e8d0f7e1777749922a898be AutoCAD2008：ZY：打开工具栏右键，点击视图，弹出的视图窗口无图标显示，如附件 和第二次打开视图崩溃
+e1622e7ccec4b4c434a3a84ab225456244ca74d7 修正每次打开材质窗口，材质图片往右移动一次的问题。
+2f7a4127218a3d8bc4c987cc608f43b29146d515 修正第二次打开材质窗口崩溃的问题，恢复了荣斌的修改。
+174ccf533a36adf33c8de2b2223c0e9d42432196 bug_0361495: 格式工厂4.1.0-TY/ZY：在设置中勾选转换完成后关闭电脑后电脑没有关闭且软件无法再次打开
+7786d140bd1b99b03c6759f0942fc8a6ca9537b1 0361385: autocad2008-ZY/TY：（主体）插入光栅图像参照时，点击 在收藏夹中查看，查找范围不会定位到收藏夹路径.[100%]
+8da52865782fc45ac7106bf537c7ba3992f069f1 0363537: Photoshop7.0:ZY->保存工作区，提示：不能完成“存储工作区”命令，因为改文件已锁定。
+                                                  在“windows资源管理器”中使用“属性”命令来解锁文件(部分机器有这个问题)
+输出版本：yuanyanghotpot_6.0.6.10-p-noreg-64combo_amd64.deb
+
+
+20211101 修改点：
+57674a1496c24193177fa3751dd5f4f5ae1d2d0a 关闭gtk filedialog功能
+620d62aec203a66dcc5afd24c9c1be70ce353b78 office2013\2016\2019功能区菜单显示和下拉框显示问题，EXCEL2013右键不能粘贴问题
+20df78b5d5f50ef41aebf291c54fbc2b421b67f6 Revert "bug_0363289: 双击打开3D素材，提示找不到指定的图形文档，请确认文档存在"
+36f9fe0d5cd6015bf2ae1523538fe511e9124bce 解决ansys启动慢的问题：(ESYNC: applay eventfd_synchronization patch)     use WINEESYNC=1 to enable esync. For more infomation, read README.esync
+0beb2721335a17114401e67f00addc464df76eb2 zyh:shield parameter check for gtk
+85f2083e276c85da27dc84f008c57d34440e2a72 1.add gtk filedialog;2.change  DPI according to resolution
+d6c1719c5e31117528f5645ac8327b1559069fd6 office2019: 修复登录HTML页面显示问题以及浏览器版本低的问题
+b7f71c0fa28ca3f71e3e6d2eecdcfc8a54166551 编译普通版火锅，将高级版支持的应用区分开
+8c79fe386f8fa07ffac085c50631db72a377ce8a Merge branch 'bug_0363781' into 'hotpot_6.0_professional_no_reg'
+d52244e22d36aefd414e5be77204727a52dc7138 bug_0363781: foxmail7.2 应用-写邮件-添加截图，点击截屏按钮-截屏操作并确认-查看图片1.截图后图片显示异常，只显示图标 2.点击发送，弹出报错：连接错误
+654285361c93529f6f89d62c3df07a7d2d66fcd5 Merge branch 'bug_0361585' into 'hotpot_6.0_professional_no_reg'
+d3677347242a26e48db88a2a8a2c66a6b3bb32b2 Merge branch 'bug_363165_361495_363363' into 'hotpot_6.0_professional_no_reg'
+a6ed460cab986d94e1ee554af89c9d93618422a8 bug_0361585: WinRAR（评估版本）TY/ZY文件-反选按钮，点击后未选中除当前选中内容的其他全部内容（100%)
+3a71a40eed2d2a86315fb1c6f6e33cd6781ab5f1 0363165:工具集，视频合并和混流弹窗列表一直闪 && 0361495: 格式工厂4.1.0-TY/ZY：在设置中勾选转换完成后关闭电脑后电脑没有关闭且软件无法再次打开&&0363363:工具集，重命名功能无法添加文件
+输出版本：yuanyanghotpot_6.0.6.11-p-noreg-64combo_amd64.deb
+
+
+20211108 修改点：
+4706a5276ceeb07ca3e388258b0b71d9dd497d40 修改photoshop7.0的包名
+99f15a3e4e21a7cfccb7067f675db730a1df55c officeword:修复同义词界面卡死的问题
+65df70db0bfae7b404e9919fde39fd1196fbefd9 文件关联：完善文件关联功能           1、修复需要添加多个同类型MIMETYPE的bug；           2、修复键值错误的问题
+ef9e59f0323810d7606926927114b2e0d840c320 1.repair double screen problem for dpi;2.add some NULL pointer check;3.check parent handle when converting to gtk window from wine window;
+e9236156053e38048dc65fef3bd5251fdbe0cad2 repair double screen problem for dpi;
+输出版本：yuanyanghotpot_6.0.6.12-p-noreg-64combo_amd64.deb
+
+
+20211109 修改点：
+2fafa4372e8175a4590a2324a7a5c1e1821bcbf8 Carsim-02 程序初始化时点击“Create new database from a consolidated parsfile...”时，也就是创建新数据库时，wine会报未知严重问题，程序崩溃
+48baab92cf15dc81427ab031a946398a5cb08897 160压缩 - 使用“解压到指定文件夹”功能时，“确定”按钮无论如何选择都为灰色无法点击（核心功能）
+90b9e89ef5a60a76d681fab247cd20f8309f74d1 修复visio2013,visio2016菜单不能打开的问题
+9caef1c7559743b1967724d274ef478172bc985c 修复mono gecko弹框问题
+32001b90b81973850cbc6649bb1ccc7b2ca4faf5 Merge branch 'bug_0363925' into 'hotpot_6.0_professional_no_reg'
+0b5b8a3e32805129ad20462d9bda4b8bb487dc1d bug_0363925: Photoshop7.0:ZY (主体)滤镜_视频-逐行,弹出逐行框，消除项 单选按钮点击没反应
+ca3121d0e0c47a6b07395cd8633097def5a99879 Merge branch 'bug_363789' into 'hotpot_6.0_professional_no_reg'
+3a105fea999ba0b350cfeb4e265b8cf1617e0123 0363789: foxmail7.2[主体]ZY/TY:添加多个附后，底下附件名称显示不全，图标全是txt文档图标，多个附件名称会重叠
+输出版本：yuanyanghotpot_6.0.6.13-p-noreg-64combo_amd64.deb
+
+
+20211112 修改点：
+733a6fb21740f9a6029a6af20e8162eceb16c912 提交releasenote；修改appmanager一处bug
+dd8522012c07104225bc77060d7bcaa269242d27 160压缩的文件管理UI将文件移动到系统的文件资源管理器或桌面上时，程序崩溃
+d7e384ce9214e8e3c64634916b4b8056700f4bde 重构部分appmanager代码；自动更新office201x caxacad2020容器，添加文件关联，关闭dde等
+a6fc5a4c6cf8ff5225c649c14b81947413190a00 bug_0363547:修改360安全浏览器窗口弹出后立刻消失的问题
+f20bb5968a7fe488a97525aa61f38efb5f2f2d1a bug_0364143: NotePad：TY 查找、替换功能不支持中文，输入中文后查找、替换按钮为置灰状态无法点击
+fed1981e8ff5fa99b383f94139d5f5ad08e846b7 gtk filedialog：keil uVision 打开文件对话框点击取消报错
+ede08d4e7cdfc4633cd7000045b7df787ab30788 bug_0363403:修复360安全浏览器切换到xp系统后下载弹窗打开文件夹无法打开问题
+ca62150859b19f55e71caec7a5b0d18a5ef53116 change for openfilenameW from openfilenameA
+1198295f70cf04719af936f59612c661d7145614 Merge branch 'hotpot_6.0_professional_no_reg' of http://192.168.3.51:8088/hotpot/yuanyanghotpot-6 into hotpot_6.0_professional_no_reg
+33dfea6dae4fcee35a54c3f52711c5f34a7415d1 修改360浏览器窗口弹出后立刻消失的问题
+614065f30204d0bedcd9ea4d9f8963ffddd23858 gtk filedialog：Carsim-02 程序初始化时点击“Create new database from a consolidated parsfile...”时，也就是创建新数据库时，wine会报未知严重问题，程序崩溃
+输出版本：yuanyanghotpot_6.0.6.14-p-noreg-64combo_amd64.deb
+
+20211117 修改点：
+462611a5f97c1ebf3334161da04068a8a167a4b8 修改有两个wine的menu菜单的问题；修改重新安装火锅，破坏文件关联的问题；修改重新安装火锅，死掉的微信等图标还在状态栏的问题
+0aba239f2667f68a1369a2a8b801d509f9deeb61 数码大方系列软件，启动概率卡死问题
+ee1b9427a0cbbbf259a8f2e3ff872dd355335a9b 数码大方最小化按钮不显示的问题（矢量图渲染问题）；数码大方3D无法启动的问题
+231118a23bb24d06bc3acbb455b3de08d18672c0 数码大方3D，主界面标注的中文字符显示为方框
+d21c17803641e70a89dda5c00d84ef2164aa083f 修复数码大方软件的标题栏遮挡问题
+02d5000b6ca3889c51b8e784d1ee07fbaa22a32a Merge branch 'bug_0364029' into 'hotpot_6.0_professional_no_reg'
+23b74e51d623089461b7cc30ff7394c1817b122e Merge branch 'bug_0363803' into 'hotpot_6.0_professional_no_reg'
+2857ef76b577e330ce2c18e52e0d0c494e749c15 bug363803 363785 363767 363777 修复foxmail添加附件问题
+13f83e43b9fcd27c5cef367cd226fd834f239238 bug_0364029: ［Foxmail］窗口基本操作_关闭/退出_应用右上角关闭按钮，点击后应用关闭但后台进程持续存在一段时间后结束导致无法立即再次启动应用
+271d64849eb12f725dd908ac00562af40c187e88 Merge branch 'bug_0364291' into 'hotpot_6.0_professional_no_reg'
+f5b1045b01ced11b62e6e9171d7186e7276ae2cc bug_0364291: ［360浏览器:TY：(主体)］URL地址栏-下载管理：下载对话框中新建下载任务后无法直接打开下载的网页，报错DDED故障（100%）
+b4f5670df60e292dbe4c4a9ff00eaa82052de924 160压缩的文件管理UI将文件移动到系统的文件资源管理器或桌面上时，程序崩溃 2
+487583c467a97a21e6796721f4b1114bb72a6a3f excel2016和2019关闭dde，解决双击不能打开xls文件的问题
+6660ee140efa1d93aa88a481ecab3c7e0e81dcdd 1.解决gtk文件对话框保存文件时，切换filter后，自动添加后缀问题。
+ca75b770aa7187dd0ead0f01666f21a46929d09c 1.解决viso保存文件时，按钮置灰问题；2.解决微信无法发送文件问题。
+输出版本：yuanyanghotpot_6.0.6.15-p-noreg-64combo_amd64.deb
+
+20211119 修改点：
+6f22b6541661dfec5d4a85427e21186999a914bb 设置每次启动qq先杀进程
+ad777bc35436922ec190e59e76e11ad419943c59 1.添加宏控制是否启用gtk文件对话框
+7b8099ce625804afdc46033a3e51886108e68dcd 修改有两个wine的menu菜单的问题；修改重新安装火锅，破坏文件关联的问题；修改重新安装火锅，死掉的微信等图标还在状态栏的问题
+43d547615230903cbce0dee701335637a270d7ec 数码大方系列软件，启动概率卡死问题
+f9651cde85d5bb01441b64d3a72a5880f9d23cad 数码大方最小化按钮不显示的问题（矢量图渲染问题）；数码大方3D无法启动的问题
+27ad197cc20a50d675b299897d531d516a535ac1 数码大方3D，主界面标注的中文字符显示为方框
+588fd6a11c532ba59521fa44db03bb2458cc3349 修复数码大方软件的标题栏遮挡问题
+334e9bce1e24dba76ff5c9af10550e691053726e Merge branch 'bug_0363029' into 'hotpot_6.0_professional_no_reg'
+e88e6594ca9bd9a641e8cd1a5e53c1206d654486 Merge branch 'bug_0363031' into 'hotpot_6.0_professional_no_reg'
+392603406f31366454e86d8d5f2057d07aab6213 0363029: ［sourceinsight3.5］ZY/TY，Options-Document Options/Style Properties/ Key Assignmentss等弹出窗口，1.点击help按钮没反应 2.部分复选框/输入框显示内容不全
+fd4b016ee351386d7b915caa81577a6e263e219e bug_0363031: ［sourceinsight3.5：ZY］Window-New Window/Close Window，新建或删除窗口之后，点击菜单window没有反应，菜单其他功能按钮可以正常点击，最小化再最大化之后又可以点击（100%）。
+输出版本：yuanyanghotpot_6.0.6.16-p-noreg-64combo-nogtk_amd64.deb
+
+20211121 修改点：
+4834333e49d14822d895117756a017a353be3d9e 0361601:  修改数码大方宏定义
+05307d9c3c303a434396cdb8d0806f78e0f44859 缓慢移动微信窗口，窗口边框显示异常残影
+2e5d49cbc00a9b5f0ab7ad223d89a84058d35cc5 Merge branch 'bug_0361601' into 'hotpot_6.0_professional_no_reg'
+a7ba07f609566db204626377518c577f83b235fc  0361601: 数码大方CAD2020：ZY/TY:打开CAD后，左侧边标题栏最上面的应用的图标看不见，旁边的新建 打开 保存 另存为等快速按钮也不可见（100%）
+1dace746600e69033718ef648a5d201d67f8758c Merge branch 'bug_0363031' into 'hotpot_6.0_professional_no_reg'
+334a6862b20d79dd352d737b7a3470873b5afe09 bug_0363031: ［sourceinsight3.5：ZY］Window-New Window/Close Window，新建或删除窗口之后，点击菜单window没有反应，菜单其他功能按钮可以正常点击，最小化再最大化之后又可以点击（100%）。
+输出版本：yuanyanghotpot_6.0.6.17-p-noreg-64combo_amd64.deb
+输出版本：yuanyanghotpot_6.0.6.17-u_amd64.deb
+
+20211124 修改点：
+e17b0bb9bd669683e098ac8127c3336f883a6fb excel2013/2016/2019 右键菜单消失的问题；excel2013/2016 通过网页插入外部数据崩溃的问题
+523daea99e0cf923eb9fc4441b691d9b20f31139 Merge branch 'bug_361385' into 'hotpot_6.0_professional_no_reg'
+9db7422cb324683092445795dd27b18eef91d11a  361385: autocad2008-ZY/TY：（主体）插入光栅图像参照时，点击 在收藏夹中查看，查找范围不会定位到收藏夹路径.[100%]
+6f54a26ead285e3159ded40ae114631fb188d946 补全appmanager的打印信息
+068f60eabaeb1e7f4b3165146a0b643c50d85a59 Merge branch 'bug_0361727_0361657' into 'hotpot_6.0_professional_no_reg'
+d79219c1ca5630e094cdc5f1d96d410249964c17 0361657_数码大方CAD2020：ZY/TY:保存文件后缀为exb，ZY会有2个文件：exb和exb.link,TY是一个文件，但文件图标也不对;361727_数码大方CAD2020：ZY:无法输出明细表
+a7491635defcdc8c952815169f9dabe155fdcb14 Merge branch 'bug_0364435' into 'hotpot_6.0_professional_no_reg'
+effbcd08ff1c3e0cdb47f7f03ba1fb29bc5b23c3 Merge branch 'bug_0364435' into 'hotpot_6.0_professional_no_reg'
+db54f2ac0b9b051eae4e1b56a792a79f308f9bb9 bug_0364435: ［Notepad:ZY/TY：(主体)］-创建文档桌面快捷模式，桌面会多生成一个同名称在文件 100%
+6a9d1a23675dea01f1f2c4fd79772caf7483bc2e bug_0364435: ［Notepad:ZY/TY：(主体)］-创建文档桌面快捷模式，桌面会多生成一个同名称在文件 100%
+42dfa498831e178529be2ae772496daa0592c110 1.添加环境变量控制GTK风格文件对话框；2.文件后缀过滤忽略大小写；
+5fd5e973c97a9848a60ca7e5f09c29f09b5b1a7a 解决photoshop14鼠标上浮弹出提示信息导致卡死问题
+991ba4c5a167c3b80640dab4c795d53fda007d06 去掉xshape
+输出版本：yuanyanghotpot_6.0.6.18-p-noreg-64combo_amd64.deb
+
+20211125 修改点：
+e0a7585ffeb3680c4eebebb3d08cce8443ff7681 修复 ’其它用户无法进行文件关联问题‘ 引起的bug
+41819d678b4639a4567c8cd6239c3d812405fcc9 Merge branch 'bug_0364503' into 'hotpot_6.0_professional_no_reg'
+648479ef21109e2a33ac68af5b1d9f1c114621cc 数码大方CAD TY 拖拽转换完成文件到应用内软件崩溃
+41c9f2c2804c727283a9720a84a0bd2edb60c521 revert xshape ; 修改构建G007的错误（更换了appmanager的编译环境）
+c867b8898e32cf13e0a8594122c9e4af70b34614 Merge branch 'bug_11241845' into 'hotpot_6.0_professional_no_reg'
+bf05212ed1080b51df34f8c71caa1e476b3b0f2a Merge branch 'bug_0361601' into 'hotpot_6.0_professional_no_reg'
+aa93d64dfc72563d451ed527f9c845935cf67b9c 修复其它用户无法进行文件关联问题
+268b0f627ea02fb2faf80cf1f732ac7ef252f814  bug_361601 数码大方CAD2020(双击文件打开情况)：ZY/TY:打开CAD后，左侧边标题栏最上面的应用的图标看不见，旁边的新建 打开 保存 另存为等快速按钮也不可见（100%）
+输出版本：yuanyanghotpot_6.0.6.19-u_amd64.deb
+输出版本：yuanyanghotpot_6.0.6.19-p_amd64.deb
+
+20211130 修改点：
+671491d0da7da8c6e3746133a20ae6a2476917d8 更新ReleaseNote
+f8f4d3e945f34fb25d3aee46d0d394c70650edd7 Merge branch 'bug_0364431' into 'hotpot_6.0_professional_no_reg'
+bb823293f438abb6cee2eacc770c2543d14a7233 bug_0364431: ［Notepad:ZY/TY：(主体)］-恢复已删除文件，打开报错 100%
+020d2da91121e62186a2a5cd554a66b01a36e56c bug_0364431: ［Notepad:ZY/TY：(主体)］-恢复已删除文件，打开报错 100%
+4884d76d4d94751654d2deddab276bc17adb6d45 Merge branch 'bug_0364583' into 'hotpot_6.0_professional_no_reg'
+2db874142d54b6c476551513ee4ad3207c8b6e1c 修改使用lstrcmpW比较title出现窗体卡死的问题
+输出版本：yuanyanghotpot_6.0.6.20-u_amd64.deb
+输出版本：yuanyanghotpot_6.0.6.20-p_amd64.deb
+
+20211206 修改点：
+ad807b69aa8482e420e5b3fd741b243017c1f293 多火锅方案：abbyy finereader12 用火锅7.0启动
+3330844b06e816511b604de37a2b39a5ea51b923 creo5.0 窗口无法最大化、taskbar不显示，以及弹出窗口被覆盖的问题
+f650bdd932f35935a39bd308d794d06db9f0002c 用appmanager 打开关联的文件
+68131091ded47806fdd7a07e1b4925bafb19f651 解决火锅应用安装到其他菜单下的问题
+6c2e7fd24b8f1cd8af4b50f513817db004191742 qq不能打开pdf文件
+e9655c16fedef8e691dd5bce88160aa71ab244bd 修改QQ主窗口被其他窗口盖住后，点击QQ不能切换到前台的问题、
+0a31b7edeceb5847e055377f267ce1ad5c3bc6b1 解决office2016/2019在ZY启动后，文档编辑时卡死的问题
+输出版本：yuanyanghotpot_6.0.6.21-p-noreg_amd64.deb
+
+20211214 修改点：
+41fd4d9b291e1e51d67b76f753ef95e043d46059 修改finereader15无法启动的问题
+82359e232a7e8fec20e8061dcea9922a1e815467 加入方正扫描仪驱动
+6911ae18b8641cf947d8913a5dc28fcfe967d279 Merge branch 'bug_0365069_0365117' into 'hotpot_6.0_professional_no_reg'
+7d774d318b7d6ba23577d960e08474b31a1899f8 Merge branch 'bug_0364983' into 'hotpot_6.0_professional_no_reg'
+e15d2622c124b0e355d9276a7355b239375d1afd bug_0365069_0365117 Carsim某些按钮点击后程序崩溃
+92437e078372fc15e6aaced7dc07c06d41749fa0 0364983: CarSim:ZY：(核心)］File-New Database (Empty) ，选择文件夹窗口，界面展示不全
+b322f37d81d00b01a6c068ada0e34fdf3a38cd7a 修复photoshop14操作的最后一步渲染延迟的问题
+b10a177df1a67d1271c8cce1b2f97729735a3683 Merge branch 'bug_0364191' into 'hotpot_6.0_professional_no_reg'
+bd5f8b6a24824712f5f61ced5898a80260badd80 Merge branch 'bug_office2019' into 'hotpot_6.0_professional_no_reg'
+1006e2657e6a3f50410becb314969d3f6a4a6238 内网通首次启动不在桌面生成.lnk文件
+b08763aadcaea1e836fb05ab5b20e6ecfb3f7afb creo5宏拼写错误
+b1fe12732715d1bb043c2e820b93b18b5173df68 office2019 dde 错误
+874ccb8b07784d11a7abf6a954a07a9966e36050 修改creo5容器为64位
+2a1ced059967067adff35f19e51d968fdac4ebab Merge branch 'bug_0364955_0364961_0364959' into 'hotpot_6.0_professional_no_reg'
+4591b43774d44ebda316ecf7bf39482d35dcd91e Merge branch 'bug_0364433' into 'hotpot_6.0_professional_no_reg'
+21ed957e8c6afbc46788a813494704af5cf2aba5 补充提交：editplus-win-u程序打包时为64位程序
+dc3bd34e7458ada7ee4e95ea32c5d791ac96a27d bug_0364955: ［好压3.1:ZY/TY(主体)］:打开应用后窗口最大化，空白处黑屏显示（100%）,bug_0364961: ［好压3.1:ZY/TY(主体)］:选择查看方式-----大图标,文件正常点击，页面显示异常（100%）,bug_0364959: ［好压3.1:ZY/TY(主体)］:打开文件夹，内容正常显示，空白部分页面显示异常（100%）
+738bb7cc4ffc1513856f72ffbba154fe597031f1 解决editplus程序中，点击“查找”->粘贴复制文字查找，软件卡死退出的问题
+输出版本：yuanyanghotpot_6.0.6.22-p-noreg_amd64.deb
+
+20211221 修改点：
+d1138dc2a688ab866b8e88767a5c978f3976b5b3 极压缩软件点击“网络”后无法返回上一层目录，修改为“网络”点击无反应
+e270971ce3acec8a3a4739b97e5737011f68e820 Merge branch 'yyhp-dev' into 'hotpot_6.0_professional_no_reg'
+60b82f9d9bcd207d7cd929de00e8abee3c0d1897 修改申万证券登录后卡死问题
+0c6be6d3be548e46a25c3fcb9e15da5671f91516 Merge branch 'bug_0362991' into 'hotpot_6.0_professional_no_reg'
+9fe39c1baa71aa24fd8b91ce91d307950cc5ec79 e3.serices  颜色倒三角▼，未进行选择颜色，再次点击倒三角▼，窗口未能收回，软件偶现弹出程序错误窗口，点击关闭软件退出
+71e214846c323a610fd704b3d08ac59260d6d6ee server: Grant the same access rights when req->access is zero in duplicate_token.
+6aafdbc40b0c140c118526271a1efc78a9f7d9e6 修改tim启动后登录界面显示不全的问题
+47a0ccd2ec9c25851be6ec4a008d809683155240 专用机启动应用时，统一加入环境变量 RES_OPTIONS=timeout:1 attempts:0
+6c215de34b7b35f59dd99774ac1232e9c0d04d10 Merge branch 'bug_0364965_0365041' into 'hotpot_6.0_professional_no_reg'
+f2f93db6a515111a96b02f999553f1b34a02fdc6 bug_0364965: ［好压3.1:ZY(主体)］:右键空白处新建文件夹，新建成功后未显示定义文件名称（100%）bug_0365041: ［好压3.1:ZY/TY(核心)］:重命名文件夹/压缩文件失败（100%）
+9ed5b5c33029a7c0009dddf6039d8690dd784e52 Merge branch 'bug_0363051' into 'hotpot_6.0_professional_no_reg'
+f72c42ff85987e9fe65636d0ff2ae2163e3a3f1b Carsim8.02 0363051: 导出合并文件时，保存到指定路径，确定后 弹出错误弹窗
+44a2b1c47f3d6a89a147bd8c70a9ba2bfa69adbc 1.解决有道云笔记登录窗口输入用户名时，窗口激活异常问题;2.解决有道云笔记界面偶尔卡死问题；3.关闭有道云笔记D3D接口支持。
+输出版本：yuanyanghotpot_6.0.6.23-p-noreg_amd64.deb
+
+20211224 修改点：
+baced2870ac28e71eab2750dbde4d7e29693ed09 新加应用catiav5 64位
+5fce73273188c01b248222f721e63e0407a8c265 解决outlook2013没有手动配置功能
+65c764a9b596a7922801478e8c606c3ee8fea7db revert xdl 解决Carsim8.02导出合并文件时路径错误
+40f9b4ee53df4065dda3f88cc16d323d4a502148 微信 - 禁止wine的报错弹框
+43040ee28bedbdca7077b26f96c3fea2c9d1f6b3 修改hotpot.sh : 火锅包打包相关
+d14c1a3137ba708960b57f24e84eda1b93c0a0d1 Merge branch 'haozip_blackcreen' into 'hotpot_6.0_professional_no_reg'
+03d53a91604a8a808a280934751e7dcf12b02817 Merge branch 'bug_0365443_0365163' into 'hotpot_6.0_professional_no_reg'
+8a11d44f645af7918b2ca90e43461480a73079d6 好压listview大小变换，控件会先黑屏在变正常
+acfa66923588f0039866e2a1227ba21d45acffcc bug_0365443: ［好压3.1:TY/ZY(主体)］：进入主界面拖动左侧文件选择窗口页面无法正常使用鼠标点击使用（100%,bug_0365163: ［好压3.1:TY(边缘)］:菜单栏-工具-硬件性能评测,点击Start,正在进行评测文字只显示一半
+e523c1eb5e17d1b275d54efd93dc68d95385e10a  0365435: ［E3 2010］菜单栏帮助-内容，连续打开两次内容选项窗口后再次切换窗口内左侧标签页出现显示异常（必现），同时有概率导致异常退出（1/10）
+45dc5ed416b9d49ef39797cd6dbe45a93cb996cd Merge branch '12221439' into 'hotpot_6.0_professional_no_reg'
+c8e1a4148dbd747089f943b4031a0be1d4cf7e8d Merge branch 'bug_0365105' into 'hotpot_6.0_professional_no_reg'
+ed5c87a5050c6c91f9a350b69aecaaf5ff05d959 修改getenv获取WINEPREFIX未对结果做判定导致对段错误
+73057c842aae390b810b2b49e5090cd9ac8d86b5 0365105: [CarSim:ZY：(主体)］菜单栏-Libraries-I/O Channels：Export界面,Available Variables 字体显示异常
+afaeb2c86cc70705487e4a978021663585c67b82 Merge branch 'bug_0365107' into 'hotpot_6.0_professional_no_reg'
+93dade1136579c1627dbc357c465fbdd44abcd2e 0365107: [CarSim:ZY：(主体)］点击Libraries菜单，选择Batch：Batch Matrix,界面显示异常
+adda71e054483adbe300d0ba24daf00b34679db1 1.修改有道云笔记宏支持
+ac83c6796e88cfb11191332fa1ad2d19722d86fc Merge branch 'bug_0365211' into 'hotpot_6.0_professional_no_reg'
+95b740c0cdaaf9dffb07e5386aa470812cc31cbd 0365211: ［carsim8.02:TY：(主体)］：菜单Tools--ERD File Utility.弹出窗口点击左上角files，弹出页点击scanrun index file按钮报:程序异常退出
+3e21b7144b77faaab8abcf00ee53a92495e0a35b creo2.0 窗口无法最大化、taskbar不显示，以及弹出窗口被覆盖的问题
+输出版本：yuanyanghotpot_6.0.7.1-p-noreg_amd64.deb
+
+20211228 修改点：
+7bccfdd1939322dd62c8425aff7f23ccfbe05c3e office2010 3e02570dd 修改2
+7c74eb489af046c53896f8939e378653e02570dd （1）office2010 载入图片右键菜单旋转菜单栏消失; （2）文字ctrl＋c－》右键[A]粘贴失败;  (3) 右键菜单图片裁剪无效(2016、2019也有这个问题，由于在2013、2019、2016识别类Net UI Tool Window Layered需要返回FALSE所以这里只修复2010);
+060274d33d9a092d4416be0053e7f0d41b663a49 修改应用启动慢的问题
+4e5d8734f3de985747b0c1e6dce80e3df8ecc2b3 微信更新注册表不生效
+10433cbc166f7cb995f667f20e07681d1f33b156 Merge branch '12241702' into 'hotpot_6.0_professional_no_reg'
+e413a3f1d289440575b0018611d70e3114e5c8ab 修复notepad++联想弹窗覆盖编辑文本问题
+9d862b66ff8270940862e8d5b21db37ed85e3165 Merge branch 'bug_0365097_0365093' into 'hotpot_6.0_professional_no_reg'
+42f07ab0dee2ae029fa51a9dc0cf37ffc4de9877 更新ReleaseNote
+bd3698efe6fed53e42d973c26498177a046628e3 Merge branch '1224-1501' into 'hotpot_6.0_professional_no_reg'
+62d284428f7886714d412bff4c7931dd0a4d02cf [CarSim:ZY：(核心)］菜单栏File-Open Existing Database,弹窗,点击新建文件夹,无反应;[CarSim:ZY/TY：(主体)］菜单栏启动应用,任务栏没有显示应用图标
+4e1b006499d5c8cdec9a3dff9213f8ebe58cba52 修改win64位容器应用无法在path.c中调用getenv，变更到unix/file.c进行修改
+3b4d1b13333eed5e7da12c69148df85afacccfb0 Merge branch 'bug_0365435' into 'hotpot_6.0_professional_no_reg'
+53cddbf3c24b2694e40d373459dc78692632142f 0365435 ［E3 2010］菜单栏帮助-内容，连续打开两次内容选项窗口后再次切换窗口内左侧标签页出现显示异常（必现），同时有概率导致异常退出（1/10）
+f237eb54a73e7d24b250dc247ef5e49fa6b20c54 cadmini看图 曙光无响应
+输出版本：yuanyanghotpot_6.0.7.2-p-noreg_amd64.deb

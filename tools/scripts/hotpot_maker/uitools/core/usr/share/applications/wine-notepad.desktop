@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=记事本
+Exec=wine notepad
+Terminal=false
+Type=Application
+Icon=wine-notepad
+Categories=Wine;
+StartupWMClass=wine-notepad.exe
+

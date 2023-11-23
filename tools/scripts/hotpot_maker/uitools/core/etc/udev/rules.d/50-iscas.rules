@@ -1,0 +1,2 @@
+SUBSYSTEMS=="usb",ATTRS{idVendor}=="1677", ATTRS{idProduct}=="0028", GROUP="iscas", MODE="0666"
+SUBSYSTEMS=="usb",ATTRS{idVendor}=="096e", ATTRS{idProduct}=="0807", GROUP="iscas", MODE="0666"

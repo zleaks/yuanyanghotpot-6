@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=配置
+Exec=wine winecfg
+Terminal=false
+Type=Application
+Icon=wine-winecfg
+Categories=Wine;
+StartupWMClass=wine-winecfg.exe
+

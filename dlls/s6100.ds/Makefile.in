@@ -1,0 +1,14 @@
+MODULE    = s6100.ds
+IMPORTS   = comdlg32 shell32 shlwapi comctl32 user32 gdi32 advapi32
+EXTRALIBS = -L${srcdir} -ldl
+#EXTRAINCL = $(SANE_CFLAGS)
+
+C_SRCS = \
+	s6100ds_cap.c \
+	s6100ds_ctrl.c \
+	s6100ds_image.c \
+	s6100ds_opt.c \
+	s6100ds.c \
+	s6100ds_ui.c
+
+RC_SRCS = s6100ds.rc

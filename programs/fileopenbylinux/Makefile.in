@@ -1,0 +1,6 @@
+MODULE    = fileopenbylinux.exe
+
+EXTRADLLFLAGS = -mwindows
+
+C_SRCS = \
+	main.c
